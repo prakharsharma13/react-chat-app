@@ -26,7 +26,49 @@ const Chat = () => {
           <img src="./info.png" alt="" />
         </div>
       </div>
-      <div className="center"></div>
+      <div className="center">
+        <div className="message">
+          <img src="./avatar.png" alt="" />
+          <div className="texts">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, esse? Laboriosam, repellendus sequi. Sunt, repellat cupiditate facilis ratione omnis maiores, quia nisi quidem provident libero possimus, harum assumenda mollitia? Eveniet ad non mollitia, incidunt nulla eos quod voluptatibus harum totam?</p>
+          </div>
+          <span>1 min ago</span>
+        </div>
+        <div className="message own">
+          <div className="texts">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, esse? Laboriosam, repellendus sequi. Sunt, repellat cupiditate facilis ratione omnis maiores, quia nisi quidem provident libero possimus, harum assumenda mollitia? Eveniet ad non mollitia, incidunt nulla eos quod voluptatibus harum totam?</p>
+          </div>
+          <span>1 min ago</span>
+        </div>
+        <div className="message">
+          <img src="./avatar.png" alt="" />
+          <div className="texts">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, esse? Laboriosam, repellendus sequi. Sunt, repellat cupiditate facilis ratione omnis maiores, quia nisi quidem provident libero possimus, harum assumenda mollitia? Eveniet ad non mollitia, incidunt nulla eos quod voluptatibus harum totam?</p>
+          </div>
+          <span>1 min ago</span>
+        </div>
+        <div className="message own">
+          <div className="texts">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, esse? Laboriosam, repellendus sequi. Sunt, repellat cupiditate facilis ratione omnis maiores, quia nisi quidem provident libero possimus, harum assumenda mollitia? Eveniet ad non mollitia, incidunt nulla eos quod voluptatibus harum totam?</p>
+          </div>
+          <span>1 min ago</span>
+        </div>
+        <div className="message">
+          <img src="./avatar.png" alt="" />
+          <div className="texts">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, esse? Laboriosam, repellendus sequi. Sunt, repellat cupiditate facilis ratione omnis maiores, quia nisi quidem provident libero possimus, harum assumenda mollitia? Eveniet ad non mollitia, incidunt nulla eos quod voluptatibus harum totam?</p>
+          </div>
+          
+          <span>1 min ago</span>
+        </div>
+        <div className="message own">
+          <div className="texts">
+            <img src="https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, esse? Laboriosam, repellendus sequi. Sunt, repellat cupiditate facilis ratione omnis maiores, quia nisi quidem provident libero possimus, harum assumenda mollitia? Eveniet ad non mollitia, incidunt nulla eos quod voluptatibus harum totam?</p>
+          </div>
+          <span>1 min ago</span>
+        </div>
+      </div>
       <div className="bottom">
         <div className="icons">
           <img src="./img.png" alt="" />
