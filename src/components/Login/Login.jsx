@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./login.css";
 import { toast } from "react-toastify";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../lib/firebase";
+import { auth, db } from "../../lib/firebase";
+import { doc, setDoc } from "firebase/firestore";
 
 const Login = () => {
   const [avatar, setAvatar] = useState({
@@ -19,24 +20,36 @@ const Login = () => {
     }
   };
 
-  const handleRegister = async  e => {
+  const handleRegister = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
 
-    const {username, email, password} = Object.fromEntries(formData);
+    const { username, email, password } = Object.fromEntries(formData);
 
     try {
-      const res = await createUserWithEmailAndPassword(auth, email,password)
+      const res = await createUserWithEmailAndPassword(auth, email, password);
+
+      await setDoc(doc(db, "users", res.user.uid), {
+        username,
+        email,
+        id: res.user.uid,
+        blocked: [],
+      });
+
+      await setDoc(doc(db, "userchats", res.user.uid), {
+        chats: [],
+      });
+
+      toast.success("Account created! You can login now!");
     } catch (err) {
       console.log(err);
       toast.error(err.message);
     }
+  };
 
-  }
-
-  const handleLogin = e => {
-    e.preventDefault()
-  }
+  const handleLogin = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className="login">
       <div className="item">
